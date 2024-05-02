@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Adding Annotations to the existing function"""
-from typing import TypeVar, Union, Any, Optional, Mapping
+from typing import Any, Mapping, Union, TypeVar
 
 
 T = TypeVar('T')
