@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """Making changes after checking with mypy"""
-from typing import Tuple, Any
+from typing import Tuple, List
 
 
-def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """Making changes after checking with mypy"""
-    zoomed_in = tuple(
-        item for item in lst
-        for i in range(factor)
-    )
+    zoomed_in: List = [item for item in lst for i in range(factor)]
     return zoomed_in
 
 
