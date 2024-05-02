@@ -4,11 +4,10 @@ from typing import Any, Mapping, Union, TypeVar
 
 
 T = TypeVar('T')
-V = Union[Any, T]
-Res = Union[T, None]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: V = None) -> Res:
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[T, None] = None) -> Union[Any, T]:
     """Adding annotations to the existing function"""
     if key in dct:
         return dct[key]
