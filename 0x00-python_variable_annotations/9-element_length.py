@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""""
+"""Annotations in a existing function"""
 from typing import List, Iterable, Tuple, Sequence
 
 
