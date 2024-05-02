@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Adding Annotations to the existing function"""
-from typing import TypeVar, Dict, Any, Optional
+from typing import TypeVar, Union, Any, Optional, Mapping
 
 
-K = TypeVar('K')
-V = TypeVar('V')
+T = TypeVar('T')
+V = Union[Any, T]
+Res = Union[T, None]
 
 
-def safely_get_value(dct: Dict[K, V], key: K,
-                     default: Optional[V] = None) -> V:
+def safely_get_value(dct: Mapping, key: Any, default: V = None) -> Res:
     """Adding annotations to the existing function"""
     if key in dct:
         return dct[key]
