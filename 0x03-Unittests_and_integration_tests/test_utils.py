@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+"""A module for testing the utils module.
+"""
 import unittest
 from parameterized import parameterized
 from utils import access_nested_map
 from typing import Dict, Tuple, Union
+
 
 class TestStringMethods(unittest.TestCase):
     """
@@ -29,7 +32,7 @@ class TestStringMethods(unittest.TestCase):
             nested_map: Dict,
             path: Tuple[str],
             expected: Union[Dict, int],
-            ) -> None:
+    ) -> None:
         """Tests `access_nested_map`'s output."""
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
