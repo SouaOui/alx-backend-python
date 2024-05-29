@@ -60,6 +60,16 @@ class TestGetJson(unittest.TestCase):
         self.assertEqual(get_json(test_url), test_payload)
         mock_get.assert_called_once_with(test_url)
 
+class TestMemoize(unittest.TestCase):
+    def test_memoize():
+        class TestClass:
+
+        def a_method(self):
+            return 42
+
+        @memoize
+        def a_property(self):
+            return self.a_method()
 
 if __name__ == '__main__':
     unittest.main()
